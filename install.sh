@@ -232,12 +232,12 @@ preinstall_l2tp(){
     [ -z ${iprange} ] && iprange="192.168.18"
 
     echo "请输入预共享密钥:"
-    read -p "(默认预共享密钥: Bill_999):" mypsk
-    [ -z ${mypsk} ] && mypsk="Bill_999"
+    read -p "(默认预共享密钥: Kali_999):" mypsk
+    [ -z ${mypsk} ] && mypsk="Kali_999"
 
     echo "请输入用户名:"
-    read -p "(默认用户名: Bill_999):" username
-    [ -z ${username} ] && username="Bill_999"
+    read -p "(默认用户名: Kali_888):" username
+    [ -z ${username} ] && username="Kali_888"
 
     password=`rand`
     echo "请输入 ${username}'s 密码:"
@@ -394,8 +394,8 @@ EOF
 ipcp-accept-local
 ipcp-accept-remote
 require-mschap-v2
+ms-dns 114.114.114.114
 ms-dns 8.8.8.8
-ms-dns 8.8.4.4
 noccp
 auth
 hide-password
